@@ -11,13 +11,13 @@ int main() {
 	n = 3;
 
 
-	book* mass = new book[n];
+	book* Array = new book[n];
 	book b1 = { "TED Talks", "Anders Kriss", 2015, 350, 1500 };
 	book b2 = { "BMW History", "Inblud Rudiger", 2020, 298, 900 };
 	book b3 = { "Etagi", "Khusainov Ildar", 2017, 400, 500 };
-	mass[0] = b1;
-	mass[1] = b2;
-	mass[2] = b3;
+	Array[0] = b1;
+	Array[1] = b2;
+	Array[2] = b3;
 	std::cout << "Книга 1\n";
 	show_book(b1);
 	std::cout << '\n';
@@ -42,14 +42,15 @@ int main() {
 
 	std::cout << "Добавить новую книгу: \n";
 
-	add_book(mass, n);
+	add_book(Array, n);
 
-
+	show_book(Array[3]);
 
 	std::cout << "Теперь мы удаляем файлы. \n";
 
-	clear_arr(mass, n);
 
-	delete[] mass;
+	clear_arr(Array, n);
+
+	delete[] Array;
 	return 0;
 }
