@@ -52,9 +52,10 @@ void add_book(book*& arr, int& length) {
 	std::cout << "”кажите фамилию и им€: \n";
 	std::getline(std::cin, arr[length].author_name_sirname);
 	std::cout << "”кажите год выпуска: \n";
-	std::cin >> arr[length].year;
+	std::cin >> arr[length+1].year;
 	std::cout << "”кажите количество страниц: \n";
-	std::cin >> arr[length].pages;
+	std::cin >> arr[length+1].pages;
 	std::cout << "”кажите цену: \n";
-	std::cin >> arr[length].price;
+	std::cin >> arr[length+1].price;
+
 }
