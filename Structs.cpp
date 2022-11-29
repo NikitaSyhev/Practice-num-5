@@ -18,6 +18,7 @@ std::string author_name(book& P) {
 
 void save_book(book& P, std::string path) {
 	std::ofstream out;
+	
 	out.open(path, std::ios::app);
 	if (out.is_open()) {
 		out << P.book_name << '\n';
